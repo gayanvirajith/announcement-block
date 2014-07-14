@@ -46,46 +46,30 @@ Modules - reusable container thanks to https://github.com/CodyHouse, codyhouse.c
     color: white; }
   .announcement-section div.content {
     width: 80%;
-    float: left; }
+    float: left;
+    height: 80px; }
   .announcement-section div.action {
     width: 20%;
     float: left;
     display: table;
-    height: 100%;
     vertical-align: middle;
     overflow: hidden;
-    margin-top: 10px; }
+    height: 80px;
+    padding: 15px 0; }
     .announcement-section div.action a {
-      border: 1px solid #076fe4;
-      border-radius: 3px;
-      box-shadow: inset 0 1px 0 0 #8ebcf1;
-      color: white;
-      display: inline-block;
-      font-size: inherit;
-      font-weight: bold;
-      background-color: #4294f0;
-      background-image: -webkit-linear-gradient(#4294f0, #0776f3);
-      background-image: linear-gradient(#4294f0, #0776f3);
-      padding: 7px 18px;
-      text-decoration: none;
-      text-shadow: 0 1px 0 #0065d6;
-      background-clip: padding-box;
-      -webkit-border-radius: 0px;
-      -moz-border-radius: 0px;
-      -ms-border-radius: 0px;
-      border-radius: 0px; }
-      .announcement-section div.action a:hover:not(:disabled) {
-        box-shadow: inset 0 1px 0 0 #60a2ec;
-        cursor: pointer;
-        background-color: #2f87ea;
-        background-image: -webkit-linear-gradient(#2f87ea, #086fe3);
-        background-image: linear-gradient(#2f87ea, #086fe3); }
-      .announcement-section div.action a:active:not(:disabled), .announcement-section div.action a:focus:not(:disabled) {
-        border: 1px solid #076fe4;
-        box-shadow: inset 0 0 8px 4px #0868d3, inset 0 0 8px 4px #0868d3; }
-      .announcement-section div.action a:disabled {
-        opacity: 0.5;
-        cursor: not-allowed; }
+      text-align: center;
+      padding: 15px 20px;
+      overflow: hidden;
+      display: table-cell;
+      background-color: #007295;
+      text-decoration: none; }
+      .announcement-section div.action a:hover, .announcement-section div.action a:active, .announcement-section div.action a:focus {
+        -webkit-transition: background 0.3s ease-in-out;
+        -moz-transition: background 0.3s ease-in-out;
+        -ms-transition: background 0.3s ease-in-out;
+        -o-transition: background 0.3s ease-in-out;
+        transition: background 0.3s ease-in-out;
+        background-color: #00688b; }
     @media (max-width: 767px) {
       .announcement-section div.action {
         width: 100%;
