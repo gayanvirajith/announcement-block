@@ -1,0 +1,77 @@
+@import 'bourbon/bourbon'; // http://bourbon.io/
+
+@import '../partials/variables'; // colors, fonts etc...
+
+@import '../partials/mixins'; // custom mixins
+
+@import '../partials/layout'; // responsive grid and media queries
+
+/* -------------------------------- 
+
+Primary style
+
+-------------------------------- */
+
+html * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+*, *:after, *:before {
+    @include box-sizing(border-box);
+}
+
+body {
+    font: {
+        size: 100%;
+        family: $primary-font; // variables inside partials > _variables.scss
+    }
+    color: $color-black;
+    background-color: $color-white;
+}
+
+/* -------------------------------- 
+
+Modules - reusable container thanks to https://github.com/CodyHouse, codyhouse.co
+
+-------------------------------- */
+
+.wc-container { 
+    width: 90%;
+    max-width: $screen-lg; // breakpoints inside partials > _layout.scss
+    margin: 0 auto;
+
+    &::after { /* clearfix */
+        content: '';
+        display: table;
+        clear: both;
+    }
+}
+
+.announcement-section {
+    background-color: $color-1;
+    color: $color-white;
+    padding: 10px 0;
+
+    height:100%;
+    h5,p {line-height: 2em;}
+    p {font-size: 12px;}
+    a {color: $color-white;}
+
+    div.content { @include column(.8);}
+    div.action { 
+        @include column(.2);
+        display:table;
+        height:100%;
+        vertical-align:middle;
+        overflow: hidden;
+        margin-top:10px;
+        a { @include button; @include border-radius(0px);}
+
+        @include MQ(XS) {
+            @include clearfix;
+            @include column(1);
+            display:block;
+        }
+    }
+}
