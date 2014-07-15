@@ -55,7 +55,7 @@ Modules - reusable container thanks to https://github.com/CodyHouse, codyhouse.c
     vertical-align: middle;
     overflow: hidden;
     height: 80px;
-    padding: 15px 0; }
+    padding: 15px; }
     .announcement-section div.action a {
       text-align: center;
       padding: 15px 20px;
