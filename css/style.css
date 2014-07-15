@@ -20,7 +20,7 @@ body {
 
 /* -------------------------------- 
 
-Modules - reusable container thanks to https://github.com/CodyHouse, codyhouse.co
+Modules - reusable container thanks to https://github.com/CodyHouse and http://codyhouse.co
 
 -------------------------------- */
 .wc-container {
@@ -33,6 +33,11 @@ Modules - reusable container thanks to https://github.com/CodyHouse, codyhouse.c
     display: table;
     clear: both; }
 
+/*---------------------------------
+
+Announcement block
+
+-------------------------------- */
 .announcement-section {
   background-color: #085a78;
   color: white;
@@ -48,6 +53,9 @@ Modules - reusable container thanks to https://github.com/CodyHouse, codyhouse.c
     width: 80%;
     float: left;
     height: 80px; }
+    @media (max-width: 767px) {
+      .announcement-section div.content {
+        height: auto; } }
   .announcement-section div.action {
     width: 20%;
     float: left;
@@ -74,7 +82,10 @@ Modules - reusable container thanks to https://github.com/CodyHouse, codyhouse.c
       .announcement-section div.action {
         width: 100%;
         float: left;
-        display: block; }
+        display: block;
+        padding-left: 0;
+        padding-right: 0;
+        overflow: hidden; }
         .announcement-section div.action:after {
           content: "";
           display: table;

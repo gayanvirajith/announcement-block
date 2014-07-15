@@ -30,9 +30,10 @@ body {
     background-color: $color-white;
 }
 
+
 /* -------------------------------- 
 
-Modules - reusable container thanks to https://github.com/CodyHouse, codyhouse.co
+Modules - reusable container thanks to https://github.com/CodyHouse and http://codyhouse.co
 
 -------------------------------- */
 
@@ -48,6 +49,11 @@ Modules - reusable container thanks to https://github.com/CodyHouse, codyhouse.c
     }
 }
 
+/*---------------------------------
+
+Announcement block
+
+-------------------------------- */
 .announcement-section {
     background-color: $color-1;
     color: $color-white;
@@ -61,6 +67,10 @@ Modules - reusable container thanks to https://github.com/CodyHouse, codyhouse.c
 
         @include column(.8);
         height: 80px;
+        @include MQ(XS) 
+        {
+            height:auto;
+        }
     }
     div.action { 
         @include column(.2);
@@ -86,6 +96,9 @@ Modules - reusable container thanks to https://github.com/CodyHouse, codyhouse.c
             @include clearfix;
             @include column(1);
             display:block;
+            padding-left:0;
+            padding-right:0;
+            overflow:hidden;
         }
     }
 }
